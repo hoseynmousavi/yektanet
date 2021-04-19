@@ -1,0 +1,176 @@
+@import "mixin";
+
+.app-container {
+  padding: 15px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.app-filter-bar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: var(--background-color);
+  z-index: 2;
+  padding: 15px 0;
+
+  @media screen and (max-width: 480px) {
+    flex-wrap: wrap;
+    position: static;
+  }
+}
+
+.app-input-container {
+  display: inline-block;
+  position: relative;
+  width: 250px;
+  flex-grow: 1;
+  height: 50px;
+  margin-left: 15px;
+
+  &:last-child {
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: 480px) {
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.app-input-label {
+  position: absolute;
+  right: 20px;
+  top: 8px;
+  z-index: 1;
+  pointer-events: none;
+  color: var(--border-color);
+  font-size: var(--very-small-font);
+}
+
+.app-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(100% - 30px);
+  width: calc(100% - 42px);
+  background-color: var(--secondary-background-color);
+  padding: 23px 20px 5px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-second-color);
+  transition: all ease 0.2s;
+
+  &:focus {
+    border: 1px solid var(--third-color);
+    background-color: var(--third-background-color);
+  }
+}
+
+.app-table-scroll {
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    overflow: scroll;
+  }
+}
+
+.app-table-container {
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--secondary-background-color);
+
+  @media screen and (max-width: 480px) {
+    width: 250%;
+  }
+}
+
+.app-table-row {
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid var(--border-second-color);
+  cursor: pointer;
+  transition: background-color ease 0.2s;
+
+  &.title {
+    font-size: var(--regular-font);
+    font-weight: bold;
+    user-select: none;
+  }
+
+  &:hover {
+    background-color: var(--third-background-color);
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.app-table-row-star {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+  z-index: 1;
+  background-color: var(--fade-color);
+  width: 20px;
+  padding-top: 5px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.app-table-row-item {
+  text-align: center;
+  flex-grow: 1;
+  padding: 15px 10px;
+
+  &.name {
+    width: 15%;
+    padding: 15px 25px 15px 10px;
+  }
+
+  &.date {
+    width: 10%;
+  }
+
+  &.title {
+    width: 20%;
+  }
+
+  &.field {
+    width: 10%;
+  }
+
+  &.old_value {
+    width: 25%;
+  }
+
+  &.new_value {
+    width: 20%;
+  }
+}
+
+.app-table-row-item-sort {
+  width: 10px;
+  fill: var(--text-color);
+  transform: rotate(90deg);
+  margin-left: 5px;
+  margin-top: 3px;
+  vertical-align: top;
+  animation: sort-come ease 0.2s;
+  transition: transform ease 0.2s;
+
+  &.reverse {
+    transform: rotate(-90deg);
+  }
+}

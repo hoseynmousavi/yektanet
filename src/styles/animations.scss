@@ -1,0 +1,12 @@
+@keyframes sort-come {
+  from {
+    width: 0;
+    margin-left: 0;
+    opacity: 0;
+  }
+  to {
+    width: 10px;
+    margin-left: 5px;
+    opacity: 1;
+  }
+}

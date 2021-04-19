@@ -1,0 +1,12 @@
+@mixin btn-back-third {
+  background-image: linear-gradient(to bottom, var(--gradient-third-first-color), var(--gradient-third-second-color));
+}
+
+@mixin btn-back-forth {
+  background-image: linear-gradient(to bottom, var(--gradient-forth-first-color), var(--gradient-forth-second-color));
+}
+
+@mixin justify {
+  text-align: justify;
+  white-space: pre-line;
+}

@@ -1,0 +1,46 @@
+:root {
+    --primary-color: #F5AA4D;
+    --secondary-color: #DC6A7A;
+    --third-color: #3DCBE9;
+    --forth-color: #4E73B9;
+
+    --gradient-primary-first-color: #FFAF31;
+    --gradient-primary-second-color: #D98E17;
+    --gradient-third-first-color: #37B6D1;
+    --gradient-third-second-color: #247787;
+    --gradient-secondary-first-color: #EC6178;
+    --gradient-secondary-second-color: #CD465D;
+    --gradient-forth-first-color: #4E73B9;
+    --gradient-forth-second-color: #335596;
+
+    --nav-background-color: #FFF7ED;
+
+    --background-color: #15202B;
+    --secondary-background-color: #192734;
+    --third-background-color: #2a3845;
+
+    --solid-empty: #FFF;
+    --solid-dark: #000;
+
+    --success-color: #28BF49;
+    --error-color: #C62828;
+    --text-color: #FFF;
+    --border-color: #C4C4C4;
+    --border-second-color: #344049;
+    --fade-color: rgba(0, 0, 0, 0.2);
+    --material-color: rgba(255, 255, 255, 0.2);
+    --material-third-color: rgba(61, 203, 230, 0.2);
+    --primary-color-material: rgba(245, 170, 77, 0.25);
+    --secondary-color-material: rgba(220, 106, 122, 0.25);
+
+    --damn-small-font: 9px;
+    --very-small-font: 10px;
+    --small-font: 11px;
+    --almost-small-font: 12px;
+    --regular-font: 13px;
+    --title-font: 14px;
+    --big-font: 18px;
+    --very-big-font: 24px;
+    --damn-big-font: 27px;
+    --huge-font: 37px;
+}
